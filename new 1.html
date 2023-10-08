@@ -1,0 +1,86 @@
+<HTML>
+<head>
+  <title>Mohammed</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+</head>
+<body>
+	
+	<nav class="nav">
+		<img src="images\f.png" style="width:2.5%;" style="margin-left:300px;">
+		<a href="#" class="nav__link">Home</a>
+		<a href="#" class="nav__link">Shop</a>
+		<a href="Contact Us.html" class="nav__link">Contact Us</a>
+		<nav href="#" class="nav__lonk">Pinnacle</nav>
+		
+	</nav>
+	<div>
+		<h1> New Releases </h1>
+			<div class="slider">
+				<div class="img-box">
+					<img src="images/Dress7.png" class="slider-img">
+				</div>
+
+				<button class="btn" onclick="prev()">Prev</button>
+				<button class="bto" onclick="next()">Next</button>
+		</div>
+		<h2>Recommended</h2>
+			<img src="images\Dress1.png" style="width:15%;">
+			<img src="images\Dress2.jpg" style="width:15%;">
+			<img src="images\Dress3.jpg" style="width:15%;">
+			<img src="images\Dress4.png" style="width:15%;">
+		<h2>Popular</h2>
+			<img src="images\Dress5.png" style="width:15%;">
+			<img src="images\Dress6.png" style="width:15%;">
+			<img src="images\Dress7.png" style="width:15%;">
+	</div>
+	<script>
+var slider_img = document.querySelector('.slider-img');
+var images = ['Dress7.png', 'Dress5.png', 'Dress3.jpg', 'Dress6.png'];
+var i = 0;
+
+function prev(){
+	if(i <= 0) i = images.length;	
+	i--;
+	return setImg();			 
+}
+
+function next(){
+	if(i >= images.length-1) i = -1;
+	i++;
+	return setImg();			 
+}
+
+function setImg(){
+	return slider_img.setAttribute('src', "images/"+images[i]);
+	
+}
+	</script>
+	<script>
+		{
+			const nav = document.querySelector(".nav");
+			let lastScrollY = window.scrollY;
+
+			window.addEventListener("scroll", () => {
+				if (lastScrollY < window.scrollY) {
+					nav.classList.add("nav--hidden");
+				} else {
+					nav.classList.remove("nav--hidden");
+				}
+
+				lastScrollY = window.scrollY;
+			});
+		}
+	</script>
+	<script>
+	document.getElementById("contact-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+  
+  setTimeout(function() {
+    document.getElementById("confirmation-message").textContent = "Message sent!";
+  }, 1000);
+});
+	</script>
+</body>
+</HTML>
+ 

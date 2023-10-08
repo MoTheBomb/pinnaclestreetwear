@@ -1,0 +1,95 @@
+
+    body {
+	  --nav-height: 75px;
+	  
+      padding-top: var(--nav-height);
+    }
+	h1 {
+	  text-align: center;
+	}
+	
+	.nav {
+		width: 100%;
+		height: var(--nav-height);
+		position: fixed;
+		top: 0;
+		left: 0;
+		background: #333;
+		display: flex;
+		align-items: center;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+		transition: transform 0.2s;
+		}
+
+	.nav__link {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		padding: 15px;
+		margin-left: 10px;
+
+		
+	}
+	.nav__lonk {
+		color: #fff;
+		text-decoration: none;
+		font-weight: bold;
+		position: static;
+		font-family: arial;
+		font-size: 22.5;
+		padding: 18%;
+
+		
+	}
+	
+	.nav--hidden {
+		transform: translateY(calc(-1 * var(--nav-height)));
+		box-shadow: none;
+	}
+	a {
+	font-family: arial;
+	font-size: 22.5px;
+	}
+	
+	.slider{
+	margin:50px auto;
+	width:30%;
+}
+ 
+.img-box img{
+	width:100%;
+	margin-right: auto;
+}
+
+.btn{
+	border:none;
+	outline:none;
+	background:#888;
+	padding:10px 30px;
+	font-size: 20px;
+	color:#ddd;
+	cursor: pointer;
+	margin:10px auto;
+	margin-left:0%;
+
+
+}
+.bto{
+	border:none;
+	outline:none;
+	background:#888;
+	padding:10px 30px;
+	font-size: 20px;
+	color:#ddd;
+	cursor: pointer;
+	margin-left:13.67%;
+	margin-top: 10px;
+	position: absolute;
+
+}
+.btn:hover{
+	background: #111;
+}
+.bto:hover{
+	background: #111;
+}
